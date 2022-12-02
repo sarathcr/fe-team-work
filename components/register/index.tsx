@@ -9,11 +9,11 @@ const Register = () => {
   const [error, setError] = useState<any>(null);
   const { signUp, currentUser }: any = useAuth();
 
-  console.log("currentUser====>", currentUser);
+  // console.log("currentUser====>", currentUser);
 
   async function submitHandler() {
     // e.stopPropagation();
-    if (!email || !password || !confirmPassword) {
+    if (!email || !password) {
       setError("please enter email, password and confirm password");
       return;
     } else {
@@ -35,7 +35,7 @@ const Register = () => {
       </p>
       <form className="mt-2 space-y-6" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
-        {error && <div className="w-full max-w-[40ch] border border-solid border-rose-400 text-rose-400 py-2 text-center">{error}</div>}
+        {error && <div className="w-full  border border-solid border-rose-400 text-rose-400 py-2 text-center">{error}</div>}
         <div className="-space-y-px rounded-md shadow-sm">
           <div className="mb-5">
             <label htmlFor="email-address" className="sr-only">

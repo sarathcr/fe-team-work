@@ -40,7 +40,7 @@ const ForgotPassword = () => {
         mailSent
       ) : (
         <>
-          <p>Forgot Password?</p>
+          <p className="font-extrabold">Forgot Password?</p>
           <form className="mt-2 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" value="true" />
             {error && <div className="w-full border border-solid border-rose-400 text-rose-400 py-2 text-center">{error}</div>}

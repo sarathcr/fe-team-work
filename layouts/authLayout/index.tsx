@@ -15,7 +15,7 @@ const AuthLayout = ({ children, title, description, buttonText, routelink }: Aut
   return (
     <div className={`${styles.auth} h-full relative w-full`}>
       <div className="w-full flex h-full gap-0">
-        <div className={`bg-secondary w-2/3 h-full flex items-center grow justify-center ${styles.auth__section_left}`}>
+        <div className={`bg-secondary w-2/3 hidden h-full md:flex items-center grow justify-center ${styles.auth__section_left}`}>
           <header className={`p-10 fixed left-0 top-0`}>
             <figure className="w-23">
               <Image src={Logo} alt={"logo"} />
@@ -34,7 +34,12 @@ const AuthLayout = ({ children, title, description, buttonText, routelink }: Aut
             )}
           </div>
         </div>
-        <div className="h-full w-1/3 flex flex-col align-center justify-center text-center px-16 py-1">{children}</div>
+        <div className="h-full w-full sm:w-[500px] sm:mx-auto md:w-1/3 flex flex-col align-center justify-center text-center px-6 lg:px-16 py-1">
+          <figure className="mx-auto mb-8 md:hidden">
+            <Image src={Logo} alt={"logo"} />
+          </figure>
+          {children}
+        </div>
       </div>
     </div>
   );
