@@ -1,0 +1,12 @@
+.auth {
+  $root: &;
+  &__section {
+    &_left {
+      background: rgb(20, 175, 214);
+      background: radial-gradient(circle, rgba(20, 175, 214, 1) 50%, rgba(14, 132, 219, 1) 100%);
+    }
+  }
+  &__content {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
