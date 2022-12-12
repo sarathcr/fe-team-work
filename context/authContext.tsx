@@ -36,7 +36,7 @@ export function AuthProvider({ children }: AuthStateProps) {
       setCurrentUser(user);
       setLoading(false);
       if (user) {
-        router.push("/dashboard/user");
+        router.push("/admin");
       } else {
         router.push("/auth/login");
       }
